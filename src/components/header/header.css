@@ -1,0 +1,34 @@
+.header {
+	padding: 1.6em 15px;
+
+	background-color: rgb(187, 225, 230);
+}
+
+.header_in {
+	display: flex;
+	align-items: center;
+	
+	gap: 2em;
+}
+
+.header_logo {
+	flex: 1 1 auto;
+}
+
+.header_logo__in {
+	font-size: 1.8em;
+	color: rgb(28, 29, 25);
+	font-weight: 700;
+	letter-spacing: 0.04em;
+
+	transition: color 0.3s ease;
+	text-decoration: none;
+}
+
+.header_logo__in:hover {
+	color: rgb(0, 108, 250);
+}
+
+.header_cart {
+
+}

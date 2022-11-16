@@ -1,0 +1,12 @@
+.booklist__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+
+	margin: 0 -2em -2em 0;
+}
+
+.booklist__item {
+	width: 25%;
+	padding: 0 2em 2em 0;
+}
