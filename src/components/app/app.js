@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../header';
+import ShoppingCartTable from '../shopping_cart_table';
 import {
 	HomePage,
 	CartPage,
@@ -14,7 +15,7 @@ import './null.css';
 const App = () => {
 	return (
 		<div className='wrapper'>
-			<Header />
+			<Header numItems={5} total={210}/>
 			<div className='wrapper__in'>
 				<Routes>
 					<Route path="*" element={<NotFoundPage />} />
@@ -22,6 +23,7 @@ const App = () => {
 					<Route path="/cart" element={<CartPage />} />
 				</Routes>
 			</div>
+			<ShoppingCartTable />
 		</div>
 	);
 };

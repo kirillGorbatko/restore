@@ -30,5 +30,40 @@
 }
 
 .header_cart {
+	text-decoration: none;
+}
 
+.header_cart__icon {
+	width: 4em;
+	height: 4em;
+	
+	flex-shrink: 0;
+	margin-right: .8em;
+}
+
+.header_cart__icon svg {
+	fill: #8A7A2A;
+}
+
+.header_cart__info {
+	color:#000;
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+@media (min-width: 640px) {
+	.header_cart {
+		display: flex;
+		align-items: center;
+	}
+}
+
+@media (max-width: 639px) {
+	.header_cart {
+		text-align: center;
+	}
+
+	.header_cart__icon {
+		display: none;
+	}
 }

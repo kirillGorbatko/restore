@@ -1,12 +1,21 @@
 .booklist__list {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: stretch;
-
-	margin: 0 -2em -2em 0;
+	display: grid;
 }
 
 .booklist__item {
-	width: 25%;
-	padding: 0 2em 2em 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media (min-width: 640px) {
+	.booklist__list {
+		gap: 2em;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	}
+}
+
+@media (max-width: 639px) {
+	.booklist__list {
+		gap: 3.6em;
+	}
 }

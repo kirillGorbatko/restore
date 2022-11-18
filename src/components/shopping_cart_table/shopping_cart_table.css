@@ -1,0 +1,130 @@
+.shopping_cart_table {
+	padding: 4em 0;
+}
+
+.shopping_cart_table__title {
+	font-size: 2em;
+	font-weight: 700;
+
+	margin-bottom: 2em;
+}
+
+.shopping_cart_table__table {
+	width: 100%;
+	border-collapse: collapse;
+
+	margin-bottom: 2em;
+}
+
+.shopping_cart_table__table tr:not(:last-child) {
+	border-bottom: 2px solid grey;
+}
+
+.shopping_cart_table__table td:nth-child(1) {
+	width: 10%;
+}
+.shopping_cart_table__table td:nth-child(2) {
+	width: 35%;
+}
+.shopping_cart_table__table td:nth-child(3) {
+	width: 8%;
+}
+.shopping_cart_table__table td:nth-child(4) {
+	width: 10%;
+}
+.shopping_cart_table__table td:nth-child(5) {
+	width: 35%;
+}
+
+.shopping_cart_table__table td:nth-child(5) {
+	text-align: right;
+}
+
+.shopping_cart_table__table thead tr {
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+}
+
+.shopping_cart_table__table thead td {
+	font-weight: 700;
+}
+
+.shopping_cart_table__actions {
+	display: flex;
+	gap: 1em;
+}
+
+.shopping_cart_table__icon {
+	border-radius: 5px;
+
+	background: #fff;
+	border: 1px solid;
+	transition: background .3s ease, color .3s ease;
+}
+
+.shopping_cart_table__icon:hover {
+	color: #fff;
+}
+
+.shopping_cart_table__icon--plus_mod {
+	color: green;
+	border-color: green;
+}
+.shopping_cart_table__icon--plus_mod:hover {
+	background: green;
+}
+
+.shopping_cart_table__icon--minus_mod {
+	color: rgb(193, 193, 29);
+	border-color: rgb(193, 193, 29);
+}
+.shopping_cart_table__icon--minus_mod:hover {
+	background: rgb(193, 193, 29);
+}
+
+.shopping_cart_table__icon--del_mod {
+	color: red;
+	border-color: red;
+}
+.shopping_cart_table__icon--del_mod:hover {
+	background: red;
+}
+
+.shopping_cart_table__total {
+	text-align: right;
+	font-weight: 700;
+	font-size: 1.2em;
+}
+
+@media (min-width: 640px) {
+	.shopping_cart_table__table td {
+		padding: 12px 8px;
+		font-size: 16px;
+	}
+
+	.shopping_cart_table__actions {
+		justify-content: flex-end;
+	}
+
+	.shopping_cart_table__icon {
+		min-width: 2.4em;
+		font-size: 1em;
+		padding: .4em .6em;
+	}
+}
+
+@media (max-width: 639px) {
+	.shopping_cart_table__table td {
+		padding: 6px;
+		font-size: 14px;
+	}
+
+	.shopping_cart_table__actions {
+		flex-direction: column;
+	}
+
+	.shopping_cart_table__icon {
+		font-size: .8em;
+		padding: .2em .3em;
+	}
+}
