@@ -47,7 +47,7 @@ class BookListContainer extends React.Component {
 	};
 };
 
-const mapStateToProps = ({books, loading, error}) => {
+const mapStateToProps = ({bookList: {books, loading, error}}) => {
 	return { books, loading, error }
 };
 
