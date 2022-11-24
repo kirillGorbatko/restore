@@ -49,14 +49,11 @@
 }
 
 .book__wrap {
-
 }
 
 .book__button {
 	height: 2.4em;
 	width: 100%;
-	max-width: 20em;
-	margin: 0 auto;
 
 	font-size: 18px;
 	font-weight: 700;	
