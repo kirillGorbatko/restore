@@ -4,7 +4,7 @@ import ErrorIndicator from '../error_indicator/error_indicator';
 import BookListItem from '../book_list_item';
 
 import './book_list.css';
-
+import { bindActionCreators } from 'redux';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withBookstoreService } from '../hoc'
@@ -53,10 +53,10 @@ const mapStateToProps = ({bookList: {books, loading, error}}) => {
 
 
 const mapDispatchToProps = (dispatch, { bookstoreService }) => {
-	return {
-		fetchBooks: fetchBooks(bookstoreService, dispatch),
-		onAddedToCart: (id) => dispatch(bookAddedToCart(id)),
-	};
+	return bindActionCreators({
+		fetchBooks: fetchBooks(bookstoreService),
+		onAddedToCart: bookAddedToCart,
+	}, dispatch);
 };
 
 export default compose(

@@ -1,21 +1,22 @@
 import React from 'react';
 import Header from '../header';
-import ShoppingCartTable from '../shopping_cart_table';
 import {
 	HomePage,
 	CartPage,
 	NotFoundPage,
 } from '../pages';
 
+import { connect } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 
 import './app.css';
 import './null.css';
 
-const App = () => {
+const App = ({items, total}) => {
+
 	return (
 		<div className='wrapper'>
-			<Header numItems={5} total={210}/>
+			<Header numItems={items.length} total={total}/>
 			<div className='wrapper__in'>
 				<Routes>
 					<Route path="*" element={<NotFoundPage />} />
@@ -23,9 +24,15 @@ const App = () => {
 					<Route path="/cart" element={<CartPage />} />
 				</Routes>
 			</div>
-			<ShoppingCartTable />
 		</div>
 	);
 };
 
-export default App;
+const mapStateToProps = ({shoppingCart: {cartItems, orderedTotal}}) => {
+	return {
+		items: cartItems,
+		total: orderedTotal,
+	};
+};
+
+export default connect(mapStateToProps)(App);

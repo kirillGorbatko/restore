@@ -6,6 +6,10 @@
 	padding: 15px;
 }
 
+.container__title {
+	text-align: center;
+}
+
 .wrapper {
 	width: 100%;
 	height: 100%;
