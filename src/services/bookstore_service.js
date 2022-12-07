@@ -22,12 +22,54 @@ export default class BookstoreService {
 			author: 'Marijn Haverbeke',
 			price: 129,
 		},
+		{
+			id: 4,
+			img: 'https://images.pexels.com/photos/919278/pexels-photo-919278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+			title: 'Beautiful title',
+			author: 'Beautiful author',
+			price: 19,
+		},
+		{
+			id: 5,
+			img: 'https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg?auto=compress&cs=tinysrgb&w=800',
+			title: 'Beautiful man',
+			author: 'Beautiful author',
+			price: 49,
+		},
+		{
+			id: 6,
+			img: 'https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+			title: 'Beautiful view',
+			author: 'Beautiful author',
+			price: 999,
+		},
+		{
+			id: 7,
+			img: 'https://images.pexels.com/photos/326212/pexels-photo-326212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+			title: 'Beautiful waterfall',
+			author: 'Beautiful author',
+			price: 56,
+		},
+		{
+			id: 8,
+			img: 'https://images.pexels.com/photos/794494/pexels-photo-794494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+			title: 'Beautiful flowers',
+			author: 'Beautiful author',
+			price: 60,
+		},
+		{
+			id: 9,
+			img: 'https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+			title: 'Beautiful lake',
+			author: 'Beautiful author',
+			price: 60,
+		},
 	];
 
 	getBooks() {
 		return new Promise((resolve, reject) => {
 			setTimeout(() => {
-				if (Math.random() > .75) {
+				if (Math.random() > 1) {
 					reject(new Error('Something bad happend'))
 				} else {
 					resolve(this.data);

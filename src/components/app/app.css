@@ -18,6 +18,14 @@
 	overflow: hidden;
 }
 
-.wrapper__in {
-	padding: 5em 0;
+@media (min-width: 640px) {
+	.wrapper__in {
+		padding: 5em 0 2em;
+	}
+}
+
+@media (max-width: 639px) {
+	.wrapper__in {
+		padding: 2em 0 2em;
+	}
 }

@@ -61,7 +61,6 @@
 	background-color: #0e4c56;
 	color: #fff;
 	border-radius: .4em;
-	border: none;
 	transition: background .3s ease, color .3s ease;
 }
 
