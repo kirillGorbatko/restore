@@ -3,15 +3,16 @@ import React from 'react';
 import './paggination.css'
 
 const Paggination = ({
-	booksPerPage,
-	totalBooks,
+	numbersOfPage,
 	currentPage,
 	paginate,
 	changePage,
 }) => {
 	const pageNumbers = [];
 
-	for(let i = 1; i <= Math.ceil(totalBooks / booksPerPage); i++) pageNumbers.push(i);
+	if (numbersOfPage <= 1) return;
+
+	for(let i = 1; i <= numbersOfPage; i++) pageNumbers.push(i);
 
 	return (
 		<nav className='paggination'>

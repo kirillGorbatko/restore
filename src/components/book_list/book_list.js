@@ -39,8 +39,7 @@ const BookList = ({books, onAddedToCart}) => {
 				}
 			</ul>
 			<Paggination
-				booksPerPage={bookPerPage}
-				totalBooks={books.length}
+				numbersOfPage={Math.ceil(books.length / bookPerPage)}
 				currentPage={currentPage}
 				paginate={paginate}
 				changePage={changePage}

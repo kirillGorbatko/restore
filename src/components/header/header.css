@@ -1,7 +1,21 @@
 .header {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+
 	padding: 1.6em 15px;
 
 	background-color: rgb(187, 225, 230);
+
+	transition: transform .3s ease;
+}
+
+.header.header--scroll_state {
+	transform: translateY(-3em);
+}
+
+.header.header--scroll_state .header_in {
+	transform: translateY(1.5em);
 }
 
 .header_in {
@@ -9,6 +23,8 @@
 	align-items: center;
 	
 	gap: 2em;
+
+	transition: transform .3s ease;
 }
 
 .header_logo {

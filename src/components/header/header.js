@@ -1,11 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 import './header.css'
 
 const Header = ({numItems, total}) => {
+	const [scrollState, setScrollState] = useState(false);
+
+	const headerScroll = () => {
+		if (window.scrollY > 10 && !scrollState) {
+			setScrollState(true);
+		}
+
+		if (window.scrollY <= 10 && scrollState) {
+			setScrollState(false);
+		}
+	}
+
+	window.addEventListener('scroll', headerScroll);
+
 	return(
-		<header className='header'>
+		<header className={`header ${scrollState ? 'header--scroll_state' : ''}`}>
 			<div className='header_in container'>
 				<div className='header_logo'>
 					<Link to="/" className='header_logo__in'>ReStore</Link>
