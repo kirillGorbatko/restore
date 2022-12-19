@@ -20,12 +20,12 @@
 
 @media (min-width: 640px) {
 	.wrapper__in {
-		padding: 15em 0 2em;
+		padding: 13em 0 2em;
 	}
 }
 
 @media (max-width: 639px) {
 	.wrapper__in {
-		padding: 12em 0 2em;
+		padding: 11em 0 2em;
 	}
 }

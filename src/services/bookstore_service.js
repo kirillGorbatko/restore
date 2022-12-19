@@ -55,7 +55,7 @@ export default class BookstoreService {
 			img: 'https://images.pexels.com/photos/794494/pexels-photo-794494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
 			title: 'Beautiful flowers',
 			author: 'Beautiful author',
-			price: 60,
+			price: 51,
 		},
 		{
 			id: 9,

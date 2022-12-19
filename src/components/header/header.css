@@ -7,16 +7,23 @@
 
 	background-color: rgb(187, 225, 230);
 
-	transition: transform .3s ease;
+	transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .header.header--scroll_state {
-	transform: translateY(-3em);
+	transform: translateY(-4em);
+	box-shadow: rgba(0, 0, 0, 0.2) 0 .8em 2.4em;
 }
 
 .header.header--scroll_state .header_in {
-	transform: translateY(1.5em);
+	transform: translateY(2em);
 }
+
+.header.header--scroll_state .header_logo__in,
+.header.header--scroll_state .header_cart {
+	transform: scale(.8);
+}
+
 
 .header_in {
 	display: flex;
@@ -32,13 +39,15 @@
 }
 
 .header_logo__in {
+	display: inline-block;
+
 	font-size: 1.8em;
 	color: rgb(28, 29, 25);
 	font-weight: 700;
 	letter-spacing: 0.04em;
 
-	transition: color 0.3s ease;
 	text-decoration: none;
+	transition: color .3s ease, transform .3s ease;
 }
 
 .header_logo__in:hover {
@@ -47,6 +56,7 @@
 
 .header_cart {
 	text-decoration: none;
+	transition: transform .3s ease;
 }
 
 .header_cart__icon {

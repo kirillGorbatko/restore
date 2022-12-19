@@ -17,7 +17,7 @@ const BookListItem = ({ book, onAddedToCart }) => {
 				<div className='book__wrap'>
 					<button 
 						onClick={onAddedToCart}
-						type='button' 
+						type='button'
 						className='book__button'
 					>Buy</button>
 				</div>
